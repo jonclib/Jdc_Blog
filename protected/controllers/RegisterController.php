@@ -45,9 +45,14 @@ class RegisterController extends Controller
 				// print_r($_POST);
 
 				Yii::app()->user->setFlash('register','Gracias por registrarse en la aplicación.');
-				// $this->refresh();
+
+				// este metodo refresca los input, ingresados en los input
+				$this->refresh();
 
 				// $this->render('index',array('model'=>$model));
+
+				// redirects en yii
+				// $this->redirect(['index'])
 
 
 			}
