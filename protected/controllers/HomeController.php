@@ -1,6 +1,6 @@
 <?php
 
-class BlogController extends Controller
+class HomeController extends Controller
 {
 
 	/**

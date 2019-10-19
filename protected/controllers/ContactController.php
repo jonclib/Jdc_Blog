@@ -1,6 +1,6 @@
 <?php
 
-class BlogController extends Controller
+class ContactController extends Controller
 {
 
 	/**

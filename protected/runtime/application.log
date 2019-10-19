@@ -1,0 +1,8 @@
+2019/10/19 16:33:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "home". in C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('home')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/Jdc_Blog/home
+---
