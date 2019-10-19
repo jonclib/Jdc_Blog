@@ -1,7 +1,11 @@
 <?php
-
+// modifique la ruta original
+// $yii=dirname(__FILE__).'/../framework/yii.php';
+// por
+// $yii=dirname(__FILE__).'/framework/yii.php';
+// para tenerla al mismo nivel 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../framework/yii.php';
+$yii=dirname(__FILE__).'/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following lines when in production mode
