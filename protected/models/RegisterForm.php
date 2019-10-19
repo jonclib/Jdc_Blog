@@ -7,10 +7,13 @@
  */
 class RegisterForm extends CFormModel
 {
+
+	// propiedades obligatorias para las validaciones,para pasarlas al controlador
 	public $first_name;
 	public $last_name;
 	public $email;
 	public $password;
+	public $verifyCode;
 
 	/**
 	 * Declares the validation rules.
@@ -23,7 +26,7 @@ class RegisterForm extends CFormModel
 			// email has to be a valid email address
 			array('email', 'email'),
 			// verifyCode needs to be entered correctly
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+			// array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 
@@ -32,10 +35,10 @@ class RegisterForm extends CFormModel
 	 * If not declared here, an attribute would have a label that is
 	 * the same as its name with the first letter in upper case.
 	 */
-	public function attributeLabels()
-	{
-		return array(
-			'verifyCode'=>'Verification Code',
-		);
-	}
+	// public function attributeLabels()
+	// {
+	// 	return array(
+	// 		'verifyCode'=>'Verification Code',
+	// 	);
+	// }
 }

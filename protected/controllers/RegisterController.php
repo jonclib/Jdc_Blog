@@ -25,9 +25,14 @@ class RegisterController extends Controller
 	 */
 	public function actionIndex()
 	{
+		// crear una instancia del modelo, para poder validar el formulario, si no no puedo
+		$model=new RegisterForm;
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+
+		// le paso model a la vista
+		$this->render('index',array('model'=>$model));	
+		// $this->render('index');
 		// echo "blog";
 	}
 
@@ -42,9 +47,9 @@ class RegisterController extends Controller
 	// 	}
 	// }
 
-		public function actionRegister()
+		public function actionRegisterr()
 	{
-		$model=new LoginForm;
+		$model=new RegisterForm;
 		if(isset($_POST['ContactRegister']))
 		{
 			$model->attributes=$_POST['ContactForm'];

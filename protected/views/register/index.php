@@ -29,6 +29,7 @@ $this->breadcrumbs=array(
 
 	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 
+	<!-- le paso model desde el controlador para las validaciones -->
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
@@ -56,18 +57,18 @@ $this->breadcrumbs=array(
 	</div>
 	
 
-	<?php if(CCaptcha::checkRequirements()): ?>
+	<!-- <?php //if(CCaptcha::checkRequirements()): ?>
 		<div class="row">
-			<?php echo $form->labelEx($model,'verifyCode'); ?>
+			<?php //echo $form->labelEx($model,'verifyCode'); ?>
 			<div>
-				<?php $this->widget('CCaptcha'); ?>
-				<?php echo $form->textField($model,'verifyCode'); ?>
+				<?php //$this->widget('CCaptcha'); ?>
+				<?php //echo $form->textField($model,'verifyCode'); ?>
 			</div>
 			<div class="hint">Please enter the letters as they are shown in the image above.
 				<br/>Letters are not case-sensitive.</div>
-				<?php echo $form->error($model,'verifyCode'); ?>
+				<?php //echo $form->error($model,'verifyCode'); ?>
 			</div>
-		<?php endif; ?>
+		<?php //endif; ?> -->
 
 		<div class="row buttons">
 			<?php echo CHtml::submitButton('Submit'); ?>

@@ -428,3 +428,115 @@ Stack trace:
 REQUEST_URI=/Jdc_Blog/register
 in C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php (31)
 in C:\xampp\htdocs\Jdc_Blog\index.php (17)
+2019/10/19 18:13:15 [error] [php] Undefined variable: model (C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): RegisterController->renderFile()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): RegisterController->renderPartial()
+#2 C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php(31): RegisterController->render()
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): RegisterController->actionIndex()
+#4 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): RegisterController->runAction()
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): RegisterController->runActionWithFilters()
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): RegisterController->run()
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Jdc_Blog\index.php(17): CWebApplication->run()
+REQUEST_URI=/Jdc_Blog/register
+in C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php (32)
+in C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php (31)
+in C:\xampp\htdocs\Jdc_Blog\index.php (17)
+2019/10/19 18:13:36 [error] [php] Undefined variable: model (C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php:32)
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): RegisterController->renderFile()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): RegisterController->renderPartial()
+#2 C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php(31): RegisterController->render()
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): RegisterController->actionIndex()
+#4 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): RegisterController->runAction()
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): RegisterController->runActionWithFilters()
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): RegisterController->run()
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Jdc_Blog\index.php(17): CWebApplication->run()
+REQUEST_URI=/Jdc_Blog/register
+in C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php (32)
+in C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php (31)
+in C:\xampp\htdocs\Jdc_Blog\index.php (17)
+2019/10/19 18:15:01 [error] [exception.CException] CException: Property "LoginForm.first_name" is not defined. in C:\xampp\htdocs\Jdc_Blog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(2760): CComponent->__get('first_name')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(LoginForm), 'first_name')
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(LoginForm), 'first_name', Array)
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'first_name', Array)
+#4 C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php(36): CActiveForm->textField(Object(LoginForm), 'first_name')
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#9 C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php(31): CController->render('index', Array)
+#10 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): RegisterController->actionIndex()
+#11 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#16 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/Jdc_Blog/register
+---
+2019/10/19 18:30:22 [error] [exception.CException] CException: Property "RegisterForm.verifyCode" is not defined. in C:\xampp\htdocs\Jdc_Blog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(2760): CComponent->__get('verifyCode')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(RegisterForm), 'verifyCode')
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(RegisterForm), 'verifyCode', Array)
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(RegisterForm), 'verifyCode', Array)
+#4 C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php(64): CActiveForm->textField(Object(RegisterForm), 'verifyCode')
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#9 C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php(31): CController->render('index', Array)
+#10 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): RegisterController->actionIndex()
+#11 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('')
+#15 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#16 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/Jdc_Blog/register
+---
+2019/10/19 18:31:22 [error] [exception.CException] CException: CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller. in C:\xampp\htdocs\Jdc_Blog\framework\validators\CCaptchaValidator.php:77
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\validators\CCaptchaValidator.php(93): CCaptchaValidator->getCaptchaAction()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\widgets\CActiveForm.php(510): CCaptchaValidator->clientValidateAttribute(Object(RegisterForm), 'verifyCode')
+#2 C:\xampp\htdocs\Jdc_Blog\protected\views\register\index.php(68): CActiveForm->error(Object(RegisterForm), 'verifyCode')
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Jdc_Blog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#7 C:\xampp\htdocs\Jdc_Blog\protected\controllers\RegisterController.php(31): CController->render('index', Array)
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): RegisterController->actionIndex()
+#9 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('register')
+#14 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/Jdc_Blog/register
+---
+2019/10/19 18:32:15 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "captcha". in C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('register/captch...')
+#3 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/Jdc_Blog/register/captcha?v=5dab3a8f2cd95
+HTTP_REFERER=http://localhost/Jdc_Blog/register
+---
