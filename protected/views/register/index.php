@@ -13,9 +13,18 @@ $this->breadcrumbs=array(
 
 
 
-<p>
+<h1>
 	Registrarse.
-</p>
+</h1>
+
+<?php if(Yii::app()->user->hasFlash('register')): ?>
+
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('register'); ?>
+</div>
+
+<?php endif; ?>
+
 
 <div class="form">
 
@@ -68,14 +77,14 @@ $this->breadcrumbs=array(
 				<br/>Letters are not case-sensitive.</div>
 				<?php //echo $form->error($model,'verifyCode'); ?>
 			</div>
-		<?php //endif; ?> -->
+			<?php //endif; ?> -->
 
-		<div class="row buttons">
-			<?php echo CHtml::submitButton('Submit'); ?>
-		</div>
+			<div class="row buttons">
+				<?php echo CHtml::submitButton('Submit'); ?>
+			</div>
 
-		<?php $this->endWidget(); ?>
+			<?php $this->endWidget(); ?>
 
-	</div><!-- form -->
+		</div><!-- form -->
 
 	<!-- <?php //endif; ?> -->

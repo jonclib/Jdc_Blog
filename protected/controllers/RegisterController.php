@@ -26,14 +26,34 @@ class RegisterController extends Controller
 	public function actionIndex()
 	{
 		// crear una instancia del modelo, para poder validar el formulario, si no no puedo
-		$model=new RegisterForm;
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
+		$model=new RegisterForm;	
 
 		// le paso model a la vista
-		$this->render('index',array('model'=>$model));	
+		// $this->render('index',array('model'=>$model));	
 		// $this->render('index');
 		// echo "blog";
+
+		if(isset($_POST['RegisterForm']))
+		{
+			// verificacion de los atributos del modelo
+			$model->attributes=$_POST['RegisterForm'];
+			if($model->validate())
+			{
+
+				// echo "correcto";
+
+				// print_r($_POST);
+
+				Yii::app()->user->setFlash('register','Gracias por registrarse en la aplicación.');
+				// $this->refresh();
+
+				// $this->render('index',array('model'=>$model));
+
+
+			}
+		}
+
+		$this->render('index',array('model'=>$model));		
 	}
 
 	// public function actionError()
@@ -47,16 +67,21 @@ class RegisterController extends Controller
 	// 	}
 	// }
 
-		public function actionRegisterr()
+		public function actionAdd()
 	{
 		$model=new RegisterForm;
-		if(isset($_POST['ContactRegister']))
+
+		// verifico que mando por post todo lo de RegisterForm, que no este vacio
+		if(isset($_POST['RegisterForm']))
 		{
-			$model->attributes=$_POST['ContactForm'];
+			// verificacion de los atributos del modelo
+			$model->attributes=$_POST['RegisterForm'];
 			if($model->validate())
 			{
 
-				echo "correcto";
+				// echo "correcto";
+
+				echo $_POST;
 				// $name='=?UTF-8?B?'.base64_encode($model->name).'?=';
 				// $subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
 				// $headers="From: $name <{$model->email}>\r\n".
