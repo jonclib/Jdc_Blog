@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Jdc Blog',
+	'defaultController'=>'blog',//cambio el controlador por defecto
 
 	// preloading 'log' component
 	'preload'=>array('log'),
