@@ -10,53 +10,76 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
+<![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
 
-<div class="container" id="page">
+	<div class="container" id="page">
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+		<div id="header">
+			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		</div><!-- header -->
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/home')),
-				array('label'=>'Blog', 'url'=>array('/blog')),
-				array('label'=>'Contact', 'url'=>array('/contact')),
-				array('label'=>'Register', 'url'=>array('/register')),
+		<div id="mainmenu">
+			<?php if(Yii::app()->user->isGuest):?>
+
+			<?php $this->widget('zii.widgets.CMenu',array(
+				'items'=>array(
+					array('label'=>'Home', 'url'=>array('/home')),
+					array('label'=>'Blog', 'url'=>array('/blog')),
+					array('label'=>'Contact', 'url'=>array('/contact')),
+					array('label'=>'Register', 'url'=>array('/register')),
+					// array('label'=>'User', 'url'=>array('/user')),
 				// array('label'=>'Login', 'url'=>array('/login'), 'visible'=>Yii::app()->user->isGuest),
 				// array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+					array('label'=>'Login', 'url'=>array('/login'), 'visible'=>Yii::app()->user->isGuest),
+					// array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/login/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				// array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				),
+			)); ?>
 
-	<?php echo $content; ?>
+			<?php endif?>
 
-	<div class="clear"></div>
+			<!-- se muestra esta navbar si el usuario esta logeado -->
+			<?php if(!Yii::app()->user->isGuest):?>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> Jonathan castro.<br/>
-		All Rights Reserved.<br/>
-		
-	</div><!-- footer -->
+				<?php $this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Dashboard', 'url'=>array('/dashboard')),		
+						array('label'=>'User', 'url'=>array('/user')),				
+						array('label'=>'Login', 'url'=>array('/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/login/logout'), 'visible'=>!Yii::app()->user->isGuest)		
+					),
+				)); ?>
 
-</div><!-- page -->
+			<?php endif?>
 
-</body>
-</html>
+
+		</div><!-- mainmenu -->
+
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+				)); ?><!-- breadcrumbs -->
+			<?php endif?>
+
+			<?php echo $content; ?>
+
+			<div class="clear"></div>
+
+			<div id="footer">
+				Copyright &copy; <?php echo date('Y'); ?> Jonathan castro.<br/>
+				All Rights Reserved.<br/>
+
+			</div><!-- footer -->
+
+		</div><!-- page -->
+
+	</body>
+	</html>
