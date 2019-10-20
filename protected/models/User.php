@@ -115,19 +115,19 @@ class User extends CActiveRecord
 		));
 	}
 
-	 public function validatePassword($password)
-    {
-        // return $this->hashPassword($password,$this->salt)===$this->password;
-        return password_verify( $password, $hash );
-    }
+	 // public function validatePassword($password)
+  //   {
+  //       // return $this->hashPassword($password,$this->salt)===$this->password;
+  //       return password_verify( $password, $hash );
+  //   }
 
-    public function checkUser($email, $password)
-	{
+ //    public function checkUser($email, $password)
+	// {
 			
 		
-		return $this->verifyHash( $password, $hash );
+	// 	return $this->verifyHash( $password, $hash );
 		
-	}
+	// }
 
 	public function verifyHash( $password, $hash )
 	{
@@ -135,13 +135,11 @@ class User extends CActiveRecord
 
 	}
 
-
-
  
-    public function hashPassword($password,$salt)
-    {
-        return md5($salt.$password);
-    }
+    // public function hashPassword($password,$salt)
+    // {
+    //     return md5($salt.$password);
+    // }
 
 	/**
 	 * Returns the static model of the specified AR class.

@@ -754,3 +754,42 @@ Stack trace:
 REQUEST_URI=/Jdc_Blog/site/login
 HTTP_REFERER=http://localhost/Jdc_Blog/site/login
 ---
+2019/10/20 21:12:11 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "sigin". in C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(270): CController->missingAction('sigin')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('sigin')
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('login/sigin')
+#3 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/Jdc_Blog/login/sigin
+HTTP_REFERER=http://localhost/Jdc_Blog/register
+---
+2019/10/20 21:12:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "sigin". in C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(270): CController->missingAction('sigin')
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('sigin')
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('login/sigin')
+#3 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/Jdc_Blog/login/sigin
+HTTP_REFERER=http://localhost/Jdc_Blog/register
+---
+2019/10/20 21:13:01 [error] [php] Undefined variable: model (C:\xampp\htdocs\Jdc_Blog\protected\views\login\index.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(872): LoginController->renderFile()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(785): LoginController->renderPartial()
+#2 C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php(13): LoginController->render()
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#4 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): LoginController->runAction()
+#6 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): LoginController->runActionWithFilters()
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): LoginController->run()
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Jdc_Blog\index.php(17): CWebApplication->run()
+REQUEST_URI=/Jdc_Blog/login
+in C:\xampp\htdocs\Jdc_Blog\protected\views\login\index.php (28)
+in C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php (13)
+in C:\xampp\htdocs\Jdc_Blog\index.php (17)
