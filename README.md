@@ -42,11 +42,11 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Website 📖
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en mi[Website](http://jonathancastrodev.com/)
+Puedes encontrar mucho más de cómo utilizar este proyecto en mi - [Website](http://jonathancastrodev.com/)
 
 ## Autor ✒️
 
-* **Jonathan Castro** - *Desarrollo Fullstack* - [joncdev](https://github.com/joncdev/Jdc_Blog)
+* **Jonathan Castro** - *Desarrollo Fullstack* - [joncdev](https://github.com/joncdev)
 
 ## Donaciones 🎁
 
