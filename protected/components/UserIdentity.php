@@ -20,33 +20,21 @@ class UserIdentity extends CUserIdentity
 
 	public function authenticate()
 	{
-		// $users=array(
-		// 	// username => password
-		// 	'demo'=>'demo',
-		// 	'admin'=>'admin',
-		// 	// 'username' => username,
-		// 	// 'password' => password
-		// );
-		// if(!isset($users[$this->username]))
-		// 	$this->errorCode=self::ERROR_USERNAME_INVALID;
-		// elseif($users[$this->username]!==$this->password)
-		// 	$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		// else
-		// 	$this->errorCode=self::ERROR_NONE;
-		// return !$this->errorCode;
-
-
-		
-		$username=strtolower($this->username);
-		$user=User::model()->find('LOWER(email)=?',array($username));
+		// $username=strtolower($this->username);
+		// $user=User::model()->find('LOWER(email)=?',array($username));
+		// selecciono donde el email es igual al email que envie por el input
+		$user=User::model()->find('email=?',array($this->username));
 		if($user===null)
+			// estos son errores que se muestran en las vistas de validacion
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		else if(!$user->validatePassword($this->password))
+		// le paso primero el password del input y verifico con el hash en la tabla
+		else if(!$user->verifyHash($this->password,$user->password))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 		{
-			$this->_id=$user->id;
-			$this->username=$user->username;
+			// aqui se guarda la info del usuario
+			$this->_id=$user->id_user;
+			$this->username=$user->email;
 			$this->errorCode=self::ERROR_NONE;
 		}
 		return $this->errorCode==self::ERROR_NONE;

@@ -793,3 +793,49 @@ REQUEST_URI=/Jdc_Blog/login
 in C:\xampp\htdocs\Jdc_Blog\protected\views\login\index.php (28)
 in C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php (13)
 in C:\xampp\htdocs\Jdc_Blog\index.php (17)
+2019/10/20 21:17:14 [error] [exception.Error] Error: Call to a member function verifyHash() on null in C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php:36
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('')
+#5 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#6 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#8 {main}
+REQUEST_URI=/Jdc_Blog/login
+HTTP_REFERER=http://localhost/Jdc_Blog/login
+---
+2019/10/20 21:27:43 [error] [php] Undefined variable: user (C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): LoginController->runAction()
+#1 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): LoginController->runActionWithFilters()
+#2 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): LoginController->run()
+#3 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Jdc_Blog\index.php(17): CWebApplication->run()
+REQUEST_URI=/Jdc_Blog/login
+in C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php (36)
+in C:\xampp\htdocs\Jdc_Blog\index.php (17)
+2019/10/20 21:33:23 [error] [exception.CException] CException: Property "User.id" is not defined. in C:\xampp\htdocs\Jdc_Blog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Jdc_Blog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id')
+#1 C:\xampp\htdocs\Jdc_Blog\protected\components\UserIdentity.php(63): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\Jdc_Blog\protected\models\LoginForm.php(55): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\Jdc_Blog\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\Jdc_Blog\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\Jdc_Blog\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\Jdc_Blog\protected\controllers\LoginController.php(25): CModel->validate()
+#7 C:\xampp\htdocs\Jdc_Blog\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#8 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\Jdc_Blog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\Jdc_Blog\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#13 C:\xampp\htdocs\Jdc_Blog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\Jdc_Blog\index.php(17): CApplication->run()
+#15 {main}
+REQUEST_URI=/Jdc_Blog/login
+HTTP_REFERER=http://localhost/Jdc_Blog/login
+---

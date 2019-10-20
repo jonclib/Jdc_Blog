@@ -20,22 +20,22 @@ class LoginController extends Controller
 			// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			// $model->attributes=$_POST['LoginForm'];
+			$model->attributes=$_POST['LoginForm'];
 			// // validate user input and redirect to the previous page if valid
-			// if($model->validate() && $model->login())
-			// 	$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate() && $model->login())
+				$this->redirect(Yii::app()->user->returnUrl);
 
 			// print_r($_POST);
 
-			$user=User::model()->find('email=?',array($_POST['LoginForm']['email']));
+			// $user=User::model()->find('email=?',array($_POST['LoginForm']['email']));
 
 			// $user->password;
 
 			// print_r($user->password);
 
-			$user->verifyHash($_POST['LoginForm']['password'],$user->password);
+			// $user->verifyHash($_POST['LoginForm']['password'],$user->password);
 
-			print_r($user->verifyHash($_POST['LoginForm']['password'],$user->password));
+			// print_r($user->verifyHash($_POST['LoginForm']['password'],$user->password));
 
 		}
 
