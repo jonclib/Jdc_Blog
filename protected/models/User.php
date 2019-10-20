@@ -115,6 +115,34 @@ class User extends CActiveRecord
 		));
 	}
 
+	 public function validatePassword($password)
+    {
+        // return $this->hashPassword($password,$this->salt)===$this->password;
+        return password_verify( $password, $hash );
+    }
+
+    public function checkUser($email, $password)
+	{
+			
+		
+		return $this->verifyHash( $password, $hash );
+		
+	}
+
+	public function verifyHash( $password, $hash )
+	{
+		return password_verify( $password, $hash );
+
+	}
+
+
+
+ 
+    public function hashPassword($password,$salt)
+    {
+        return md5($salt.$password);
+    }
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

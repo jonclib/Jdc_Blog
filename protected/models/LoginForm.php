@@ -7,6 +7,7 @@
  */
 class LoginForm extends CFormModel
 {
+	// public $email;
 	public $email;
 	public $password;
 	public $rememberMe;
