@@ -34,6 +34,7 @@ class User extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
+		// pendiente con estas reglas si no se cumplen no te deja insertar en las tablas
 		return array(
 			array('img, first_name, last_name, email, password, id_country, id_state, id_role, created_at, updated_at, last_access', 'required'),
 			array('id_country, id_state, id_role', 'numerical', 'integerOnly'=>true),

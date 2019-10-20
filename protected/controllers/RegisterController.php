@@ -26,7 +26,9 @@ class RegisterController extends Controller
 	public function actionIndex()
 	{
 		// crear una instancia del modelo, para poder validar el formulario, si no no puedo
-		$model=new RegisterForm;	
+		$model=new RegisterForm;
+
+		// $data=new User;	
 
 		// le paso model a la vista
 		// $this->render('index',array('model'=>$model));	
@@ -43,6 +45,25 @@ class RegisterController extends Controller
 				// echo "correcto";
 
 				// print_r($_POST);
+				// print_r($_POST['RegisterForm']['first_name']);
+				// $data = $model;
+
+				// print_r($data);
+				// guardo en la variable pass que cree la data del password
+				$pass = $_POST['RegisterForm']['password'];
+				// creo una instancia del modelo, para usar sus metodos etc
+				$user=new Register;
+				$user->first_name = $_POST['RegisterForm']['first_name'];
+				$user->last_name = $_POST['RegisterForm']['last_name'];
+				$user->email = $_POST['RegisterForm']['email'];
+				// $user->password = $_POST['RegisterForm']['password'];
+				$user->password = password_hash($pass,PASSWORD_BCRYPT);
+				$user->save();
+
+				// if($user->save())
+				// 	$this->redirect(array('test'));
+
+				// if($data->save())
 
 				Yii::app()->user->setFlash('register','Gracias por registrarse en la aplicación.');
 
@@ -61,6 +82,34 @@ class RegisterController extends Controller
 		$this->render('index',array('model'=>$model));		
 	}
 
+
+	public function actionTest()
+	{
+
+		echo "ok";
+
+	}
+
+
+	public function actionCreate()
+	{
+		$model=new User;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id_user));
+		}
+
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
 	// public function actionError()
 	// {
 	// 	if($error=Yii::app()->errorHandler->error)
@@ -72,7 +121,7 @@ class RegisterController extends Controller
 	// 	}
 	// }
 
-		public function actionAdd()
+	public function actionAdd()
 	{
 		$model=new RegisterForm;
 
