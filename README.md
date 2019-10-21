@@ -10,7 +10,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Server apache, php 5.1 =>, mysql_
+_Server apache, php 5.1 >=, mysql_
 
 ```
 * [XAMPP](https://www.apachefriends.org/es/index.html) - Server usado
@@ -38,7 +38,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-* [Yii1.1](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
+* [Yii 1.1](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
 
 ## Website 📖
 
