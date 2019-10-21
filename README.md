@@ -38,7 +38,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-* [Yii](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
+* [Yii1.1](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
 
 ## Website 📖
 
