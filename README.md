@@ -40,9 +40,6 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 * [Yii 1.1](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
 
-## Website 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en mi - [Website](http://jonathancastrodev.com/)
 
 ## Autor ✒️
 
