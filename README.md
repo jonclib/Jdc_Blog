@@ -27,7 +27,7 @@ _Instala un servidor web_
 _Clona el proyecto_
 
 ```
-* [Git](https://github.com/joncdev/Jdc_Blog.git) - Server usado
+* [Git]() - Server usado
 ```
 
 _Ingresa como administrador email:admin@hotmail.com password: admin_
@@ -43,10 +43,10 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Autor ✒️
 
-* **Jonathan Castro** - *Desarrollo Fullstack* - [joncdev](https://github.com/joncdev)
+* **Jonathan Castro** - *Desarrollo Fullstack* - [)
 
 ## Donaciones 🎁
 
-* [Paypal](https://paypal.me/programadorjonathan?locale.x=es_XC) - Muchas gracias por tu aporte.
+* [Paypal]() - Muchas gracias por tu aporte.
 
 
