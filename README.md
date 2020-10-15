@@ -41,10 +41,6 @@ _Agrega notas adicionales sobre como hacer deploy_
 * [Yii 1.1](https://www.yiiframework.com/doc/guide/1.1/es) - El framework web usado
 
 
-## Autor ✒️
-
-* **Jonathan Castro** - *Desarrollo Fullstack* - [)
-
 ## Donaciones 🎁
 
 * [Paypal]() - Muchas gracias por tu aporte.
